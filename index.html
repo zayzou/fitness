@@ -6,14 +6,49 @@
     <title>Nutrition Plan</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <style>
-        .meal-timing tr:nth-child(odd){ background-color: #E1D5E7; }
-        .supplementation tr:nth-child(odd){ background-color: #D4E1D5; }
-        .example-day  tr:nth-child(odd){ background-color: #D9E1F2; }
-        .table-cell { border: 1px solid #ddd; padding: 8px; }
-        .table-header { background-color: #fff; font-weight: bold; }
+        .meal-timing tr:nth-child(odd) {
+            background-color: #F2CEEF;
+        }
+
+        .supplementation tr:nth-child(odd) {
+            background-color: #DAF2D0;
+        }
+
+        .example-day tr:nth-child(odd) {
+            background-color: #CAEDFB;
+        }
+
+        .table-cell {
+            border: 1px solid #ddd;
+            padding: 8px;
+        }
+
+        .table-header {
+            background-color: #fff;
+            font-weight: bold;
+        }
+
+
+        /* Responsive styles */
+        @media (max-width: 640px) {
+            th:nth-child(1), td:nth-child(1) {
+                display: none; /* Hide Time column on small screens */
+            }
+        }
+
+        /* Row clickable */
+        tbody tr {
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        /* Hover effect */
+        tbody tr:hover,tbodytr:nth-child(odd) {
+            background-color: #6db3fd; /* Change background color on hover */
+        }
     </style>
 </head>
-<body class="bg-gray-100">
+<body class="">
 
 <div class="container mx-auto p-4">
     <h1 class="text-2xl font-bold mb-4">Nutrition Plan</h1>
@@ -32,7 +67,9 @@
             <tr>
                 <td class="table-cell">7:00</td>
                 <td class="table-cell">Breakfast 🍳</td>
-                <td class="table-cell">3 whole eggs, 🍳 3 egg whites, 🍳 80 g oats with 1 tbsp peanut butter, 🥜 1 banana, 🍌 250 ml milk, 🥛 multivitamin, 💊 Omega-3, 🧠 Vitamin D, 🌞 10 g collagen</td>
+                <td class="table-cell">3 whole eggs, 🍳 3 egg whites, 🍳 80 g oats with 1 tbsp peanut butter, 🥜 1 banana,
+                    🍌 250 ml milk, 🥛 multivitamin, 💊 Omega-3, 🧠 Vitamin D, 🌞 10 g collagen
+                </td>
             </tr>
             <tr>
                 <td class="table-cell">10:00</td>
@@ -42,22 +79,30 @@
             <tr>
                 <td class="table-cell">13:00</td>
                 <td class="table-cell">Lunch 🍗</td>
-                <td class="table-cell">170 g grilled chicken breast, 🍗 200 g brown rice, 🍚 200 g steamed vegetables, 🥦 1 small avocado 🥑</td>
+                <td class="table-cell">170 g grilled chicken breast, 🍗 200 g brown rice, 🍚 200 g steamed vegetables, 🥦 1
+                    small avocado 🥑
+                </td>
             </tr>
             <tr>
                 <td class="table-cell">15:00</td>
                 <td class="table-cell">Pre-Workout Snack 🍏</td>
-                <td class="table-cell">1 apple, 🍏 2 tbsp natural peanut butter, 🥜 protein shake (1-2 scoops whey protein), 🥤 200 mg caffeine, ☕ 2-3 grams Beta-Alanine, 💪 (optional) 5-10 grams BCAAs</td>
+                <td class="table-cell">1 apple, 🍏 2 tbsp natural peanut butter, 🥜 protein shake (1-2 scoops whey
+                    protein), 🥤 200 mg caffeine, ☕ 2-3 grams Beta-Alanine, 💪 (optional) 5-10 grams BCAAs
+                </td>
             </tr>
             <tr>
                 <td class="table-cell">18:00</td>
                 <td class="table-cell">Post-Workout Meal 🍴</td>
-                <td class="table-cell">Protein shake (1-2 scoops whey protein) with water or milk, 🥛 200 g white rice or 🍚 large baked potato, 🥔 sports drink (for quick carbs), 🍹 5 grams creatine</td>
+                <td class="table-cell">Protein shake (1-2 scoops whey protein) with water or milk, 🥛 200 g white rice or
+                    🍚 large baked potato, 🥔 sports drink (for quick carbs), 🍹 5 grams creatine
+                </td>
             </tr>
             <tr>
                 <td class="table-cell">19:30</td>
                 <td class="table-cell">Dinner 🍽</td>
-                <td class="table-cell">225 g salmon or 🍣 lean beef, 🍖 200 g quinoa or 🍚 sweet potato, 🍠 200 g steamed vegetables, 🥦 1 tbsp olive oil</td>
+                <td class="table-cell">225 g salmon or 🍣 lean beef, 🍖 200 g quinoa or 🍚 sweet potato, 🍠 200 g steamed
+                    vegetables, 🥦 1 tbsp olive oil
+                </td>
             </tr>
             <tr>
                 <td class="table-cell">21:30</td>
@@ -82,7 +127,9 @@
             <tr>
                 <td class="table-cell">Daily</td>
                 <td class="table-cell">Creatine 💪</td>
-                <td class="table-cell">5 grams (💪 mixed with post-workout shake or 🥤 taken with water/juice any time of the day)</td>
+                <td class="table-cell">5 grams (💪 mixed with post-workout shake or 🥤 taken with water/juice any time of
+                    the day)
+                </td>
             </tr>
             <tr>
                 <td class="table-cell">Post-Workout</td>
@@ -142,7 +189,9 @@
             <tr>
                 <td class="table-cell">7:00</td>
                 <td class="table-cell">Breakfast</td>
-                <td class="table-cell">3 whole eggs, 3 egg whites, 80 g oats with 1 tbsp peanut butter, 1 banana, 250 ml milk, multivitamin, Omega-3, Vitamin D, 10 g collagen</td>
+                <td class="table-cell">3 whole eggs, 3 egg whites, 80 g oats with 1 tbsp peanut butter, 1 banana, 250 ml
+                    milk, multivitamin, Omega-3, Vitamin D, 10 g collagen
+                </td>
             </tr>
             <tr>
                 <td class="table-cell">10:00</td>
@@ -152,23 +201,30 @@
             <tr>
                 <td class="table-cell">13:00</td>
                 <td class="table-cell">Lunch</td>
-                <td class="table-cell">170 g grilled chicken breast, 200 g brown rice, 200 g steamed vegetables, 1 small avocado</td>
+                <td class="table-cell">170 g grilled chicken breast, 200 g brown rice, 200 g steamed vegetables, 1 small
+                    avocado
+                </td>
             </tr>
             <tr>
                 <td class="table-cell">15:00</td>
                 <td class="table-cell">Pre-Workout Snack</td>
-                <td class="table-cell">1 apple, 2 tbsp natural peanut butter, protein shake (1-2 scoops whey protein), 200 mg caffeine, 2-3 grams Beta-Alanine, (optional) 5-10 grams BCAAs
+                <td class="table-cell">1 apple, 2 tbsp natural peanut butter, protein shake (1-2 scoops whey protein),
+                    200 mg caffeine, 2-3 grams Beta-Alanine, (optional) 5-10 grams BCAAs
                 </td>
             </tr>
             <tr>
                 <td class="table-cell">18:00</td>
                 <td class="table-cell">Post-Workout Meal</td>
-                <td class="table-cell">Protein shake (1-2 scoops whey protein) with water or milk, 200 g white rice or large baked potato, sports drink (for quick carbs), 5 grams creatine</td>
+                <td class="table-cell">Protein shake (1-2 scoops whey protein) with water or milk, 200 g white rice or
+                    large baked potato, sports drink (for quick carbs), 5 grams creatine
+                </td>
             </tr>
             <tr>
                 <td class="table-cell">19:30</td>
                 <td class="table-cell">Dinner</td>
-                <td class="table-cell">225 g salmon or lean beef, 200 g quinoa or sweet potato, 200 g steamed vegetables, 1 tbsp olive oil</td>
+                <td class="table-cell">225 g salmon or lean beef, 200 g quinoa or sweet potato, 200 g steamed
+                    vegetables, 1 tbsp olive oil
+                </td>
             </tr>
             <tr>
                 <td class="table-cell">21:30</td>
